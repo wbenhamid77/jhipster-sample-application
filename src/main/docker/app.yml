@@ -11,13 +11,13 @@ services:
       - SPRING_LIQUIBASE_URL=jdbc:mysql://mysql:3306/jhipstersampleapplication?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&createDatabaseIfNotExist=true
       - SPRING_ELASTICSEARCH_URIS=http://elasticsearch:9200
     ports:
-      - 127.0.0.1:8080:8080
+      - 127.0.0.1:8089:8089
     healthcheck:
       test:
         - CMD
         - curl
         - -f
-        - http://localhost:8080/management/health
+        - http://localhost:8089/management/health
       interval: 5s
       timeout: 5s
       retries: 40
